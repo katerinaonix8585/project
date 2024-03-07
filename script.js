@@ -6,7 +6,6 @@ async function getData() {
     const obj = await response.json();
     const {latitude, longitude, city, country} = obj; 
     console.log({latitude, longitude, city, country});
-    
     const response_weather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
     const weatherData = await response_weather.json();
     const { current_weather, current_weather_units } = weatherData;
