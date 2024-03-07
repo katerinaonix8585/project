@@ -12,26 +12,99 @@
 
 .main {
     flex: 1; 
+    background-color: rgb(226, 219, 211);
 }
 
 .header {
     background-color: rgb(147, 204, 204);
-    min-height: 20px;
+    min-height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 40%;
+    padding: 0 20px; 
+    position: sticky;
+    top: 0px;
 }
+
+.headerText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;  
+    font-weight: bold;
+      
+}
+
+.wrapperHeader {
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    margin-right: 10px; 
+}
+
+
+
 
 .footer {
     background-color: rgb(147, 204, 204);
-    min-height: 20px;
+    min-height: 60px;
 }
 
 .weatherContainer{
     background-color: lightcyan;
-    min-width: 400px;
+    width: 400px;
     margin: 30px;
     padding: 40px;
-    border-radius: 15px;
+    border-radius: 15px;    
 }
 
 .weatherContainer >p {
     padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;  
+    font-weight: bold;    
+    
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #fff;
+    border-bottom-color: #2692c4;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 0.7s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.text_responce {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: cornflowerblue;
+    font-weight: 100;   
+    font-style: italic;   
+
+}  
+
+.textWeather {
+    color: cornflowerblue;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;  
+    font-weight: bold;
+    text-decoration: underline;
 }

@@ -15,22 +15,22 @@ async function getData() {
     const weatherDesc = descriptionWeather(weathercode);
 
     const itemWindCountry = document.createElement("p");
-    itemWindCountry.textContent = `Country: ${country}`;
+    itemWindCountry.innerHTML = `Country: <span class="text_responce">${country}</span>`;
     weatherContainer.append(itemWindCountry);
     const itemWindCity = document.createElement("p");
-    itemWindCity.textContent = `City: ${city}`;
+    itemWindCity.innerHTML = `City: <span class="text_responce">${city}</span>`;
     weatherContainer.append(itemWindCity);
     const itemTemperature = document.createElement("p");
-    itemTemperature.textContent = `Temperature: ${temperature} ${current_weather_units.temperature}`;
+    itemTemperature.innerHTML = `Temperature: <span class="text_responce">${temperature} ${current_weather_units.temperature}</span>`;
     weatherContainer.append(itemTemperature);
     const itemWindSpeed = document.createElement("p");
-    itemWindSpeed.textContent = `Speed of wind: ${windspeed} ${current_weather_units.windspeed}`;
+    itemWindSpeed.innerHTML = `Speed of wind: <span class="text_responce">${windspeed} ${current_weather_units.windspeed}</span>`;
     weatherContainer.append(itemWindSpeed);
     const itemWinddirection = document.createElement("p");
-    itemWinddirection.textContent = `Direction of wind: ${winddirection} ${current_weather_units.winddirection}`;
+    itemWinddirection.innerHTML = `Direction of wind: <span class="text_responce">${winddirection} ${current_weather_units.winddirection}</span>`;
     weatherContainer.append(itemWinddirection);
     const itemWeathercode = document.createElement("p");
-    itemWeathercode.textContent = `Description: ${weatherDesc}`;
+    itemWeathercode.innerHTML = `Description: <span class="text_responce">${weatherDesc}</span>`;
     weatherContainer.append(itemWeathercode);
   
 }
@@ -128,4 +128,7 @@ function descriptionWeather(weatherсode) {
 
 
 getData();
+
+
+
 
