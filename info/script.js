@@ -18,7 +18,7 @@ async function getData() {
         const newItemDescription = document.createElement("p");
         newItemDescription.textContent = elem.description;
         const newItemLink = document.createElement("a")
-        newItemLink.innerText = "Ссылка";
+        newItemLink.innerText = elem.title;
         newItemLink.href = elem.link;
 
         newItem.append(newItemTitle, newItemImage, newItemDescription, newItemLink);
